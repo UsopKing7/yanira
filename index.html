@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Strange - Multiverso de Amor</title>
+  <title>Yanira ❤️</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+    :root {
+      --primary: #e63946;
+      --secondary: #a8dadc;
+      --dark: #1d3557;
+      --light: #f1faee;
+      --accent: #ff9e00;
+    }
 
     body {
       display: flex;
@@ -14,67 +23,116 @@
       min-height: 100vh;
       margin: 0;
       padding: 20px;
-      background-color: #1b1b2f;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       font-family: 'Poppins', sans-serif;
-      color: #fff;
+      color: var(--light);
+      line-height: 1.6;
     }
 
     .contenedor {
-      background: linear-gradient(135deg, #c1121f, #780000);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+      background: rgba(29, 53, 87, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .pareja {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 25px;
+      gap: 30px;
+      margin-bottom: 40px;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .pareja:hover {
+      transform: translateY(-5px);
     }
 
     .frace {
-      background-color: rgba(255, 255, 255, 0.15);
-      padding: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(230, 57, 70, 0.2), rgba(168, 218, 220, 0.1));
+      padding: 25px;
+      border-radius: 15px;
       backdrop-filter: blur(5px);
       width: 48%;
       box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .frace:hover {
+      background: linear-gradient(145deg, rgba(230, 57, 70, 0.3), rgba(168, 218, 220, 0.2));
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     }
 
     .frace h1 {
-      font-size: 1.5rem;
-      margin-bottom: 25px;
-      color: #ffebeb;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .frace h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
     }
 
     .frace h4 {
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.8;
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.05rem;
+      color: rgba(241, 250, 238, 0.9);
     }
 
     .frace img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      filter: brightness(0.95) contrast(1.05);
     }
 
     .frace img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      filter: brightness(1) contrast(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .pareja {
+        flex-direction: column;
+      }
+      
+      .frace {
+        width: 100%;
+      }
+      
+      .frace:nth-child(2) {
+        order: -1;
+      }
     }
   </style>
 </head>
 <body>
   <div class="contenedor">
-    <!-- Pareja 1 -->
     <div class="pareja">
       <div class="frace">
         <h1>Dr. Strange</h1>
@@ -88,7 +146,6 @@
       </div>
     </div>
 
-    <!-- Pareja 2 -->
     <div class="pareja">
       <div class="frace">
         <h1>Hombre araña</h1>
@@ -99,11 +156,10 @@
         </h4>
       </div>
       <div class="frace">
-        <img src="https://i.pinimg.com/736x/38/01/5a/38015adbe9a23d2343fea3e8f017c116.jpg" alt="Dr. Strange">
+        <img src="https://i.pinimg.com/736x/38/01/5a/38015adbe9a23d2343fea3e8f017c116.jpg" alt="Hombre Araña">
       </div>
     </div>
 
-    <!-- Pareja 3 -->
     <div class="pareja">
       <div class="frace">
         <h1>Cap. America</h1>
@@ -115,56 +171,50 @@
         </h4>
       </div>
       <div class="frace">
-        <img src="https://i.pinimg.com/736x/2e/ae/b5/2eaeb5e7316ac2f143b0c9b779ec468f.jpg" alt="Dr. Strange">
+        <img src="https://i.pinimg.com/736x/2e/ae/b5/2eaeb5e7316ac2f143b0c9b779ec468f.jpg" alt="Capitán América">
       </div>
     </div>
 
-    <!-- Pareja 4 (Nueva) -->
     <div class="pareja">
       <div class="frace">
-        <h1>DeePool</h1>
+        <h1>Deadpool</h1>
         <h4>eh estado pensando en nuestra relacion y dejame decirte que mis locuras tontas todo lo que vivimos
           tus locuras son hermosas, ya que tus locuras van con mis locuras
         </h4>
       </div>
       <div class="frace">
-        <img src="https://i.pinimg.com/736x/7e/74/f3/7e74f399653b0fed535477b8b7de23af.jpg" alt="Dr. Strange">
+        <img src="https://i.pinimg.com/736x/7e/74/f3/7e74f399653b0fed535477b8b7de23af.jpg" alt="Deadpool">
       </div>
     </div>
 
-    <!-- Pareja 5 (Nueva) -->
     <div class="pareja">
       <div class="frace">
         <h1>Wanda</h1>
         <h4> hemos vivido cosas tristes que nos hicieron llorar
           que talvez pensabamos que lo mejor seria separarnos
-          <br>
-          <br>
+          <br><br>
           pero siempre tubimos esperanzas que lo nuestro funcione 
           y que podamos salir adelante estando juntos
-          <br>
-          <br>
+          <br><br>
           pero sobre todo es a pesar de todo lo que vivimos 
           eres mi amoor, mi vida, mi niña
         </h4>
       </div>
       <div class="frace">
-        <img src="https://i.pinimg.com/736x/6d/4d/da/6d4dda39919333384d32a2865230bc21.jpg" alt="Dr. Strange">
+        <img src="https://i.pinimg.com/736x/6d/4d/da/6d4dda39919333384d32a2865230bc21.jpg" alt="Wanda">
       </div>
     </div>
 
-    <!-- Pareja 6 (Nueva) -->
     <div class="pareja">
       <div class="frace">
-        <h1>Dr. Strange</h1>
-        <h4>Rompo las leyes de la física<br><br>
-          desafío el destino<br>
-          pero jamás rompería<br>
-          este corazón que es tuyo.
+        <h1>Yanira</h1>
+        <h4>Bnoo.. quiero desearte un feliz happy. y espero que 
+          la hayas pasado bien en tu dia.. talvez este regalo no sea 
+          tan grande o carro pero lo hice con todo mi amor y cariño que te tengo
         </h4>
       </div>
       <div class="frace">
-        <img src="https://i.pinimg.com/736x/25/8e/cc/258eccc6d51b45e0c11fd6b5b523b3b8.jpg" alt="Dr. Strange">
+        <img src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/481044754_1677673022958193_5025112297749648238_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=zMX0Aqs7esQQ7kNvgErp45d&_nc_oc=AdmTxfOI_ASbkzWh7PjYuF942HbL3BFRjbbfiQDs55j9IOKNqmRCSHwIIBOCu60-B2qk0qcPp5yoHRa7ljzvxD5i&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=nU0F0GcGSiRMvd_Pvl0J5g&oh=00_AYFHOQ2pGAOU4BhBw1hL30bvxYIvrGulW1sKd9tyjIOE5w&oe=67F3AA0E" alt="Yanira">
       </div>
     </div>
   </div>
